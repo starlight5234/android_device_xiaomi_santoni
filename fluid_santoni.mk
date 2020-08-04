@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The ion-OS Project
+# Copyright (C) 2019 The FluidOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,26 +17,15 @@
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
 # Inherit some common ion-OS stuff.
-$(call inherit-product, vendor/ion/config/common.mk)
+$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := santoni
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4
-PRODUCT_NAME := ion_santoni
+PRODUCT_NAME := fluid_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Official
-ION_BUILD_TYPE := OFFICIAL
-ION_RELEASE_TYPE := Release
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ion.maintainer=P_Sambit
-TARGET_GAPPS_ARCH := arm64
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080
-	
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
